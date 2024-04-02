@@ -5,18 +5,22 @@ const makeRandColor = () => {
     return `rgb(${r}, ${g}, ${b})`;
 }
 
-const buttons = document.querySelectorAll('button');
+const buttons = document.querySelectorAll('button')
 
-for (let button of buttons) {
+
+for (let button of buttons){
     button.addEventListener('click', colorize)
-}
 
-const h1s = document.querySelectorAll('h1');
-for (let h1 of h1s) {
+}
+const h1s = document.querySelectorAll('h1')
+
+for (let h1 of h1s){
     h1.addEventListener('click', colorize)
+    h1.style.display = 'center'
 }
 
 function colorize() {
-    this.style.backgroundColor = makeRandColor();
-    this.style.color = makeRandColor();
+    this.style.backgroundColor = makeRandColor()
+    this.style.borderRadius = '15%'
+    this.style.color = makeRandColor()
 }
